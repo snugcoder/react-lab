@@ -14,7 +14,7 @@ function Square({ value, squareClick }) {
     <button className="square" onClick={squareClick}>{value}</button>);
 }
 
-export default function Board() {
+function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
   function handleClick(i) {
@@ -56,6 +56,19 @@ export default function Board() {
         <Square value={squares[8]} squareClick={() => handleClick(8)} />
       </div>
     </>
+  );
+}
+
+export default function Game() {
+  return (
+    <div className="game">
+      <div className="game-board">
+        <Board />
+      </div>
+      <div className="game-info">
+        <ol>{/*TODO*/}</ol>
+      </div>
+    </div>
   );
 }
 
