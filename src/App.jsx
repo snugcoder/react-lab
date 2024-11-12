@@ -3,8 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+// eslint-disable-next-line react/prop-types
 function Square({value}){
-  return <button className="square">{value}</button>;
+  function handleClick(){
+    console.log("clicked!");
+  }
+  return (
+  <button 
+  className="square" 
+  onClick={handleClick}> { value } </button>);
 }
 
 export default function Board() {
