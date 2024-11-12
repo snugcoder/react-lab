@@ -4,14 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 // eslint-disable-next-line react/prop-types
-function Square({value}){
+function Square({value, squareClick}){
   // const [value, setValue] = useState(null);
   // function handleClick(){
   //   setValue('X');
   // }
   return (
   // <button className="square"onClick={handleClick}> { value } </button>);
- <button className="square">{value}</button>);
+ <button className="square" onClick={squareClick}>{value}</button>);
 }
 
 export default function Board() {
