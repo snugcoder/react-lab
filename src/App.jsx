@@ -5,7 +5,7 @@ import './App.css'
 
 // eslint-disable-next-line react/prop-types
 function Square(){
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState(Array(9).fill(null));
   function handleClick(){
     setValue('X');
   }
