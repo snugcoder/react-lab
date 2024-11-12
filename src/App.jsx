@@ -24,19 +24,19 @@ export default function Board() {
   return (
     <>
       <div className="board-row">
-      <Square value={squares[0]} squareClick={handleClick}/>
-      <Square value={squares[1]}  />
-      <Square value={squares[2]} />
+      <Square value={squares[0]} squareClick={() => handleClick(0)}/>
+      <Square value={squares[1]}  squareClick={() => handleClick(1)}/>
+      <Square value={squares[2]} squareClick={() => handleClick(2)}/>
       </div>
       <div className="board-row">
-      <Square value={squares[3]} />
-      <Square value={squares[4]} />
-      <Square value={squares[5]} />
+      <Square value={squares[3]} squareClick={() => handleClick(3)}/>
+      <Square value={squares[4]} squareClick={() => handleClick(4)}/>
+      <Square value={squares[5]} squareClick={() => handleClick(5)}/>
       </div>
       <div className="board-row">
-      <Square value={squares[6]} />
-      <Square value={squares[7]} />
-      <Square value={squares[8]} />
+      <Square value={squares[6]} squareClick={() => handleClick(6)}/>
+      <Square value={squares[7]} squareClick={() => handleClick(7)}/>
+      <Square value={squares[8]} squareClick={() => handleClick(8)}/>
       </div>
     </>
   );
