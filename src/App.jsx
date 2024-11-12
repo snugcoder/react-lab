@@ -4,7 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 // eslint-disable-next-line react/prop-types
-function Square({value}){
+function Square(){
+  const [value, setValue] = useState(null);
   function handleClick(){
     console.log("clicked!");
   }
